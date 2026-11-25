@@ -1,0 +1,44 @@
+/* base.css - бүх хуудсанд нийтлэг загвар */
+
+/* Өнгөнүүд: эндээс сольвол бүх сайтын өнгө солигдоно */
+:root {
+    --green: #1f4d3a;
+    --wheat: #e0a526;
+    --soil: #3b2b20;
+    --mist: #eef3ec;
+    --text: #23302a;
+    --muted: #5f6f66;
+    --line: #d7e0d6;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--text); line-height: 1.6; }
+h1, h2, h3 { font-family: Georgia, serif; color: var(--green); }
+
+/* Байршил */
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 720px; }
+.section { padding: 48px 20px; }
+
+/* Товч */
+.btn { display: inline-block; background: var(--wheat); color: var(--soil); border: 0;
+       padding: 12px 22px; border-radius: 8px; font-size: 1rem; font-weight: 600;
+       cursor: pointer; text-decoration: none; }
+.btn:hover { background: #f0b83a; }
+
+/* Баганан тор */
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); }
+
+/* Бүтээгдэхүүний карт */
+.product { border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.p-icon { font-size: 2.4rem; }
+.product h3 { margin: 4px 0; font-size: 1.1rem; }
+.type { color: var(--muted); font-size: .9rem; display: block; }
+.price { color: #b98310; }
+
+/* Хөл хэсэг */
+.site-footer { background: var(--soil); color: #e8ddd2; text-align: center; padding: 20px; margin-top: 40px; }
+
+/* Жижиг дэлгэц */
+@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }

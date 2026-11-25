@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="/static/login.css">{% endblock %}
+{% block title %}Миний булан{% endblock %}
+{% block content %}
+<section class="wrap section">
+    <h1>Сайн байна уу, {{ session.user }}!</h1>
+    <div class="panel">
+        <h3>Улирлын ажлын төлөвлөгөө</h3>
+        <ul>
+            <li><b>Хавар:</b> тариалалт, мал төллөлт</li>
+            <li><b>Зун:</b> услалт, өвс бэлтгэл</li>
+            <li><b>Намар:</b> ургац хураалт, мал таргалуулалт</li>
+            <li><b>Өвөл:</b> өвөлжилт, малын тэжээл</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Хөдөө аж ахуй{% endblock %}</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/menu.css">
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+<!-- ЦЭС -->
+<header class="site-header">
+    <div class="wrap nav">
+        <a href="/" class="brand">🌾 Хөдөө аж ахуй</a>
+        <button class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+        <nav class="menu" id="menu">
+            <a href="/">Нүүр</a>
+            <a href="/products">Бүтээгдэхүүн</a>
+            <a href="/about">Бидний тухай</a>
+            {% if session.user %}
+                <a href="/dashboard" class="btn-small">{{ session.user }}</a>
+                <a href="/logout">Гарах</a>
+            {% else %}
+                <a href="/login" class="btn-small">Нэвтрэх</a>
+            {% endif %}
+        </nav>
+    </div>
+</header>
+
+<!-- ХУУДАС БҮРИЙН АГУУЛГА ЭНД ОРНО -->
+{% block content %}{% endblock %}
+
+<!-- ХӨЛ -->
+<footer class="site-footer">
+    Хөдөө аж ахуйн портал | Улаанбаатар хот | info@khuduu.mn | +976 9900 0000
+</footer>
+
+</body>
+</html>

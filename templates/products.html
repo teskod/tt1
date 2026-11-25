@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Бүтээгдэхүүн{% endblock %}
+{% block content %}
+<section class="wrap section">
+    <h1>Бүтээгдэхүүн</h1>
+    <div class="grid four">
+        {% for p in products %}
+        <div class="product">
+            <div class="p-icon">{{ p.icon }}</div>
+            <h3>{{ p.name }}</h3>
+            <span class="type">{{ p.type }}</span>
+            <strong class="price">{{ p.price }}</strong>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

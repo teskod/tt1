@@ -1,0 +1,25 @@
+/* login.css - нэвтрэх хуудас ба миний булан */
+
+/* Нэвтрэх хуудасны дэвсгэр, карт */
+.auth { min-height: 70vh; display: flex; align-items: center; justify-content: center;
+        padding: 40px 16px; background: var(--mist); }
+.auth-card { width: 100%; max-width: 400px; background: #fff; border: 1px solid var(--line);
+             border-radius: 12px; padding: 32px 30px; }
+.auth-card h1 { margin: 6px 0 20px; font-size: 1.6rem; }
+.auth-logo { font-size: 2.2rem; }
+
+/* Форм */
+.form { display: flex; flex-direction: column; gap: 14px; }
+.form label { display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: .95rem; }
+.form input { padding: 11px 12px; border: 1px solid #c4d0c4; border-radius: 8px; font: inherit; }
+.form input:focus { border-color: var(--green); outline: none; }
+.full { width: 100%; }
+
+/* Алдааны мэдэгдэл, санамж */
+.error { background: #fbe7e3; color: #a3341f; border: 1px solid #efc2ba;
+         padding: 10px 14px; border-radius: 8px; margin-bottom: 14px; }
+.hint { text-align: center; color: var(--muted); font-size: .9rem; margin: 16px 0 0; }
+
+/* Миний булан */
+.panel { border: 1px solid var(--line); border-radius: 10px; padding: 22px; max-width: 520px; }
+.panel h3 { margin-top: 0; }

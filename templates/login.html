@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="/static/login.css">{% endblock %}
+{% block title %}Нэвтрэх{% endblock %}
+{% block content %}
+<section class="auth">
+    <div class="auth-card">
+        <div class="auth-logo">🌾</div>
+        <h1>Нэвтрэх</h1>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" class="form">
+            <label>Нэвтрэх нэр <input type="text" name="username" required autofocus></label>
+            <label>Нууц үг <input type="password" name="password" required></label>
+            <button class="btn full" type="submit">Нэвтрэх</button>
+        </form>
+        <p class="hint">Туршилтын эрх: <b>admin</b> / <b>1234</b></p>
+    </div>
+</section>
+{% endblock %}

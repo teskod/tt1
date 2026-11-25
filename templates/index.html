@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="/static/home.css">{% endblock %}
+{% block content %}
+
+<!-- БАННЕР -->
+<section class="hero">
+    <div class="wrap">
+        <h1>Тал нутгийн ургац, малчны хөдөлмөр нэг дор</h1>
+        <p>Мал аж ахуй, газар тариалан, хүнсний бүтээгдэхүүний мэдээлэл.</p>
+        <a href="/products" class="btn">Бүтээгдэхүүн үзэх</a>
+        {% if not session.user %}
+        <a href="/login" class="btn btn-ghost">Нэвтрэх</a>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ЧИГЛЭЛҮҮД -->
+<section class="wrap section">
+    <h2>Үндсэн чиглэлүүд</h2>
+    <div class="grid four">
+        <div class="tile"><div class="ico">🐎</div><h3>Мал аж ахуй</h3><p>Таван хошуу малын маллагаа, өвөлжилт.</p></div>
+        <div class="tile"><div class="ico">🌱</div><h3>Газар тариалан</h3><p>Буудай, төмс, ногооны тариалалт.</p></div>
+        <div class="tile"><div class="ico">🥛</div><h3>Сүү, цагаан идээ</h3><p>Айраг, тараг, ааруул, өрөм.</p></div>
+        <div class="tile"><div class="ico">🏡</div><h3>Хүлэмж</h3><p>Хаалттай орчны ногоо ургуулалт.</p></div>
+    </div>
+</section>
+
+<!-- ШИНЭ БҮТЭЭГДЭХҮҮН -->
+<section class="band">
+    <div class="wrap section">
+        <h2>Шинэ бүтээгдэхүүн</h2>
+        <div class="grid four">
+            {% for p in products %}
+            <div class="product">
+                <div class="p-icon">{{ p.icon }}</div>
+                <h3>{{ p.name }}</h3>
+                <span class="type">{{ p.type }}</span>
+                <strong class="price">{{ p.price }}</strong>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

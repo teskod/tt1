@@ -1,0 +1,20 @@
+/* menu.css - дээд цэс */
+.site-header { background: var(--green); position: sticky; top: 0; z-index: 20; }
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 62px; }
+.brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.25rem; font-weight: bold; }
+
+.menu { display: flex; align-items: center; gap: 4px; }
+.menu a { color: #e6efe8; text-decoration: none; padding: 8px 12px; border-radius: 6px; }
+.menu a:hover { background: rgba(255,255,255,.14); }
+.menu a.btn-small { background: var(--wheat); color: var(--soil); font-weight: 600; }
+
+/* Гар утасны ☰ товч */
+.nav-toggle { display: none; background: none; color: #fff; font-size: 1.3rem;
+              border: 1px solid rgba(255,255,255,.4); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+
+@media (max-width: 720px) {
+    .nav-toggle { display: block; }
+    .menu { display: none; position: absolute; top: 62px; left: 0; right: 0; background: var(--green);
+            flex-direction: column; align-items: stretch; padding: 10px 16px 16px; }
+    .menu.open { display: flex; }
+}

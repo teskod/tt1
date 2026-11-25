@@ -1,0 +1,18 @@
+/* home.css - нүүр хуудасны баннер, чиглэлүүд */
+
+/* Баннер */
+.hero { background: linear-gradient(180deg, #7fb5a0 0%, #cfe3d0 62%, #f1e6bd 100%); padding: 90px 0; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); max-width: 14em; margin: 0 0 14px; }
+.hero p { font-size: 1.15rem; margin: 0 0 26px; }
+.btn-ghost { background: transparent; border: 2px solid var(--green); color: var(--green); margin-left: 8px; }
+.btn-ghost:hover { background: rgba(31,77,58,.1); }
+
+/* Үндсэн чиглэлүүд */
+.tile { border-top: 3px solid var(--wheat); padding: 18px 0; }
+.tile .ico { font-size: 2rem; }
+.tile h3 { margin: 6px 0; }
+.tile p { margin: 0; color: var(--muted); }
+
+/* Шинэ бүтээгдэхүүний саарал дэвсгэр */
+.band { background: var(--mist); }
+.band .product { background: #fff; }
